@@ -33,6 +33,9 @@ class Body extends Component {
 
 // Works with smart watches through resolutions as low as 225x225
 
+// Closer to a real app: disabled general text highlighting and
+// disabled default context menu
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -76,7 +79,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App"
+      onContextMenu={(event) => event.preventDefault()}>
         <header className="App-header">
             <MenuButton content="Home"
             className={this.state.homeButtonClass}
@@ -91,6 +95,7 @@ class App extends Component {
         </header>
           <SubHeader className="sub-Header" />
           <Body className="Body"/>
+          <footer className="Footer"/>
       </div>
     );
   }

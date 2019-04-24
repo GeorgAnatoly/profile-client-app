@@ -27,21 +27,32 @@
     color: black;
     background-color: darkgrey;
     border-style: groove groove none groove;
+    border-color: rgba(60, 60, 60, 0.3);
+    border-radius: 1vmin 1vmin 0 0;
 }
 
 .Header-active:hover {
     color: black;
     background-color: darkgrey;
     border-style: groove groove none groove;
+    border-color: rgba(60, 60, 60, 0.3);
+    border-radius: 1vmin 1vmin 0 0;
 }
 
 .sub-Header {
     height: 14vh;
     background-color: darkgrey;
     border-style: none none groove none;
+    border-color: rgba(60, 60, 60, 0.2);
+    border-width: 2px;
 }
 
 .Body {
-    height: 79vh;
+    height: 72vh;
     background-color: lightgray;
+}
+
+.Footer {
+    height: 7vh;
+    background-color: darkcyan;
 }

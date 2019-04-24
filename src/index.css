@@ -17,9 +17,5 @@ code {
     overflow: hidden;
     box-sizing: border-box;
     cursor: default;
-}
-
-::selection {
-    color: inherit;
-    background-color: inherit;
+    user-select: none;
 }
