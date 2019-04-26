@@ -1,6 +1,37 @@
 import React, { Component } from 'react';
 import './App.css';
 
+class JsDemo extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            string: "Please visit Microsoft!",
+            input: "",
+            output: ""
+        };
+    }
+// TODO use replace() method on user input string and allow user
+    // to select check boxes for case insensitive - use reg ex /i
+    // as well as global match - use reg ex /g
+    render() {
+
+        return (
+            <>
+            </>
+        );
+    }
+}
+
+
+
+
+
+
+
+
+
+
 class MenuButton extends Component {
     render() {
         return (
@@ -26,12 +57,14 @@ class Body extends Component {
     render() {
         return (
             <div
-                className={this.props.className}/>
+                className={this.props.className}>
+                {this.props.children}
+            </div>
         );
     }
 }
 
-// Works with smart watches through resolutions as low as 225x225
+// Works through resolutions as low as 225x225
 
 // Closer to a real app: disabled general text highlighting and
 // disabled default context menu
@@ -94,7 +127,9 @@ class App extends Component {
                             onClick={this.contactClick}/>
         </header>
           <SubHeader className="sub-Header" />
-          <Body className="Body"/>
+          <Body className="Body">
+              <JsDemo/>
+          </Body>
           <footer className="Footer"/>
       </div>
     );
