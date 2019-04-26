@@ -14,6 +14,9 @@ class JsDemo extends Component {
 // TODO use replace() method on user input string and allow user
     // to select check boxes for case insensitive - use reg ex /i
     // as well as global match - use reg ex /g
+    // allow user to define match string
+    // allow user to select boxes for replaced string toUpperCase()
+    // and toLowerCase()
     render() {
 
         return (
