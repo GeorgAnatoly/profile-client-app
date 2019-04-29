@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bd87f1a-86b7-4569-ab44-a1ecfbc28afc" name="Default Changelist" comment="preventing text highlighting and default context menu">
+    <list default="true" id="0bd87f1a-86b7-4569-ab44-a1ecfbc28afc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
@@ -22,9 +22,13 @@
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
+                <element signature="n#NavigationBar#0" />
+                <element signature="n#MenuButton#0" />
+                <element signature="n#SubHeader#0" />
+                <element signature="n#Body#0" />
               </folding>
             </state>
           </provider>
@@ -40,8 +44,8 @@
       <list>
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/App.js" />
       </list>
     </option>
@@ -63,8 +67,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -144,7 +148,8 @@
       <workItem from="1556111063725" duration="21716000" />
       <workItem from="1556200137347" duration="1394000" />
       <workItem from="1556203286725" duration="12489000" />
-      <workItem from="1556280613606" duration="14480000" />
+      <workItem from="1556280613606" duration="15225000" />
+      <workItem from="1556546532825" duration="18491000" />
     </task>
     <task id="LOCAL-00001" summary="nu init">
       <created>1556127871318</created>
@@ -160,17 +165,31 @@
       <option name="project" value="LOCAL" />
       <updated>1556130311616</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="many demos">
+      <created>1556305496555</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556305496555</updated>
+    </task>
+    <task id="LOCAL-00004" summary="many demos">
+      <created>1556305741863</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1556305741863</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70832000" />
+    <option name="totallyTimeSpent" value="90068000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="640" height="775" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.28119937" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2777778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -242,7 +261,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nu init" />
     <MESSAGE value="preventing text highlighting and default context menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="preventing text highlighting and default context menu" />
+    <MESSAGE value="many demos" />
+    <option name="LAST_COMMIT_MESSAGE" value="many demos" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/react.d.ts">
@@ -276,17 +296,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+        <state relative-caret-position="504">
+          <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/serviceWorker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="120" column="6" lean-forward="true" selection-start-line="120" selection-start-column="6" selection-end-line="120" selection-end-column="6" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="n#NavigationBar#0" />
+            <element signature="n#MenuButton#0" />
+            <element signature="n#SubHeader#0" />
+            <element signature="n#Body#0" />
           </folding>
         </state>
       </provider>

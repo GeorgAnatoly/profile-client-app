@@ -6,21 +6,40 @@ class JsDemo extends Component {
         super(props);
 
         this.state = {
-            string: "Please visit Microsoft!",
-            input: "",
-            output: ""
         };
     }
-// TODO use replace() method on user input string and allow user
-    // to select check boxes for case insensitive - use reg ex /i
-    // as well as global match - use reg ex /g
-    // allow user to define match string
-    // allow user to select boxes for replaced string toUpperCase()
-    // and toLowerCase()
+
+    static handleClick() {
+        fetch("http://localhost:3000")
+            .then(response => {
+                const reader = response.body.getReader();
+                let total = 0;
+
+                return reader.read().then(result => {
+                    if(result.done) return total;
+
+                    const value = result.value;
+
+                    total += value.length;
+
+                    console.log("Received chunk ", value);
+
+                    return reader.read().then(result =>
+                        console.log(result)
+                    );
+                })
+            })
+    }
+
     render() {
 
         return (
             <>
+                <button
+                    onClick={JsDemo.handleClick}
+                    >
+                    Response Size
+                </button>
             </>
         );
     }
@@ -33,7 +52,53 @@ class JsDemo extends Component {
 
 
 
+class NavigationBar extends Component {
+    constructor(props) {
+        super(props);
 
+        this.state = {
+            clicked: "Home"
+        };
+    }
+
+
+    handleClick = event => {
+        this.setState({
+            clicked: event.target.innerHTML
+        });
+    };
+
+    render() {
+        const clicked = this.state.clicked;
+        const active = "Header-menu Header-active";
+        const inactive = "Header-menu";
+        const homeClass = clicked === "Home" ? active : inactive;
+        const newsClass = clicked === "News" ? active : inactive;
+        const contactClass = clicked === "Contact" ? active : inactive;
+
+        return (
+            <>
+            <MenuButton
+                title="Home"
+                className={homeClass}
+                onClick={this.handleClick}
+            />
+
+            <MenuButton
+        title="News"
+        className={newsClass}
+        onClick={this.handleClick}
+        />
+
+        <MenuButton
+            title="Contact"
+            className={contactClass}
+            onClick={this.handleClick}
+        />
+        </>
+        );
+    }
+}
 
 class MenuButton extends Component {
     render() {
@@ -42,7 +107,7 @@ class MenuButton extends Component {
                 className={this.props.className}
                 onClick={this.props.onClick}
             >
-                {this.props.content}
+                {this.props.title}
             </div>
         );
     }
@@ -73,65 +138,18 @@ class Body extends Component {
 // disabled default context menu
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            homeButtonClass: "Header-menu Header-active",
-            newsButtonClass: "Header-menu",
-            contactClass: "Header-menu"
-        };
-    }
-
-    homeClick = () => {
-        this.setState({
-            homeButtonClass: "Header-menu Header-active",
-            newsButtonClass: "Header-menu",
-            contactClass: "Header-menu"
-        });
-
-        document.title = "Symbosoft - Home";
-    };
-
-    newsClick = () => {
-        this.setState({
-            homeButtonClass: "Header-menu",
-            newsButtonClass: "Header-menu Header-active",
-            contactClass: "Header-menu"
-        });
-
-        document.title = "Symbosoft - News";
-    };
-
-    contactClick = () => {
-        this.setState({
-            homeButtonClass: "Header-menu",
-            newsButtonClass: "Header-menu",
-            contactClass: "Header-menu Header-active"
-        });
-
-        document.title = "Symbosoft - Contact";
-    };
 
   render() {
+
     return (
       <div className="App"
       onContextMenu={(event) => event.preventDefault()}>
         <header className="App-header">
-            <MenuButton content="Home"
-            className={this.state.homeButtonClass}
-            onClick={this.homeClick}/>
-            <MenuButton content="News"
-                        className={this.state.newsButtonClass}
-                        onClick={this.newsClick}/>
-                        <MenuButton
-                            content="Contact"
-                            className={this.state.contactClass}
-                            onClick={this.contactClick}/>
+            <NavigationBar/>
         </header>
           <SubHeader className="sub-Header" />
           <Body className="Body">
-              <JsDemo/>
+              <JsDemo />
           </Body>
           <footer className="Footer"/>
       </div>
