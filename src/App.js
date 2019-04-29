@@ -9,26 +9,24 @@ class JsDemo extends Component {
         };
     }
 
-    static handleClick() {
-        fetch("http://localhost:3000")
-            .then(response => {
-                const reader = response.body.getReader();
-                let total = 0;
+    static async handleClick() {
+        const response = await fetch("http://localhost:3000");
+        const reader = response.body.getReader();
 
-                return reader.read().then(result => {
-                    if(result.done) return total;
+        let result = await reader.read();
+        let total = 0;
 
-                    const value = result.value;
+        while(!result.done) {
+            const value = result.value;
 
-                    total += value.length;
+            total += value.length;
 
-                    console.log("Received chunk ", value);
+            console.log("Received Chunk", value);
 
-                    return reader.read().then(result =>
-                        console.log(result)
-                    );
-                })
-            })
+            result = await reader.read();
+        }
+
+        console.log("Total received ", total);
     }
 
     render() {
